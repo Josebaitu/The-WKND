@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -118,64 +117,8 @@
             </objects>
             <point key="canvasLocation" x="835.87786259541986" y="2.8169014084507045"/>
         </scene>
-        <!--Autenticacion View Controller-->
-        <scene sceneID="w1V-0G-ifW">
-            <objects>
-                <viewController storyboardIdentifier="Ropa" id="vh5-Et-8dX" customClass="AutenticacionViewController" customModule="The_WKND" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SKD-pp-fHk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i4N-SJ-kLt">
-                                <rect key="frame" x="10" y="69" width="393" height="749"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tM0-NN-Y3x">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="240"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="vh5-Et-8dX" id="RZQ-5g-FEQ"/>
-                                        </connections>
-                                    </searchBar>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TdX-Wp-RdK">
-                                        <rect key="frame" x="0.0" y="245" width="393" height="504"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GXb-d5-w4B">
-                                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GXb-d5-w4B" id="rAx-eL-ZpW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="MUw-iH-0DW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="MUw-iH-0DW" firstAttribute="bottom" secondItem="i4N-SJ-kLt" secondAttribute="bottom" id="29v-S6-trA"/>
-                            <constraint firstItem="i4N-SJ-kLt" firstAttribute="trailing" secondItem="MUw-iH-0DW" secondAttribute="trailing" constant="10" id="6jj-8N-U2w"/>
-                            <constraint firstItem="i4N-SJ-kLt" firstAttribute="top" secondItem="MUw-iH-0DW" secondAttribute="top" constant="10" id="nZZ-HJ-7eT"/>
-                            <constraint firstItem="i4N-SJ-kLt" firstAttribute="leading" secondItem="MUw-iH-0DW" secondAttribute="leading" constant="10" id="vbi-2o-i8b"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="buscarRopa" destination="tM0-NN-Y3x" id="IeK-0D-2Iv"/>
-                        <outlet property="tablaRopa" destination="TdX-Wp-RdK" id="QYY-NA-fRg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ua-gg-9Z3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1822.1374045801526" y="2.8169014084507045"/>
-        </scene>
     </scenes>
     <resources>
         <image name="The-WKND Logo" width="800" height="600"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

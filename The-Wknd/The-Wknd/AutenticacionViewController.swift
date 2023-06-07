@@ -24,15 +24,14 @@ class AutenticacionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Inicio de Sesión"
-        
-        Analytics.logEvent("InitScreen", parameters: ["Message ": "Integración de Firebase completa"])
-        let defaults = UserDefaults.standard
-        if let email = defaults.value(forKey: "email") as? String,
-           let provider = defaults.value(forKey: "provider") as? String {
-            
-            autenticacionStackview.isHidden = true
-            self.navigationController?.pushViewController(HomeViewController(email: email, provider: ProviderType(rawValue: provider)!), animated: false)
-        }
+//        Analytics.logEvent("InitScreen", parameters: ["Message ": "Integración de Firebase completa"])
+//        let defaults = UserDefaults.standard
+//        if let email = defaults.value(forKey: "email") as? String,
+//           let provider = defaults.value(forKey: "provider") as? String {
+//
+//            autenticacionStackview.isHidden = true
+//            self.navigationController?.pushViewController(HomeViewController(email: email, provider: ProviderType(rawValue: provider)!), animated: false)
+//        }
         
         
     }
@@ -41,6 +40,11 @@ class AutenticacionViewController: UIViewController {
         super.viewWillAppear(animated)
         
         autenticacionStackview.isHidden = false
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showTable()
     }
     
 
@@ -77,6 +81,12 @@ class AutenticacionViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
 
+    }
+
+    private func showTable() {
+        let storyboard = UIStoryboard(name: "ClothesTableView", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController()!
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
 }
