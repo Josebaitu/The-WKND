@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05C66BD12A30C94E009DCA0C /* TiendaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C66BD02A30C94E009DCA0C /* TiendaView.xib */; };
-		05C66BD32A30CF70009DCA0C /* TiendaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C66BD22A30CF70009DCA0C /* TiendaTableViewController.swift */; };
 		05C80D942A24C36600FF28BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C80D932A24C36600FF28BA /* AppDelegate.swift */; };
 		05C80D962A24C36600FF28BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C80D952A24C36600FF28BA /* SceneDelegate.swift */; };
 		05C80D982A24C36600FF28BA /* AutenticacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C80D972A24C36600FF28BA /* AutenticacionViewController.swift */; };
@@ -51,6 +49,9 @@
 		05C80E022A260C1600FF28BA /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05C80E012A260C1600FF28BA /* HomeViewController.xib */; };
 		05C80E052A26586C00FF28BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 05C80E042A26586C00FF28BA /* GoogleSignIn */; };
 		05C80E072A26586C00FF28BA /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05C80E062A26586C00FF28BA /* GoogleSignInSwift */; };
+		509FA3342A312E7A00E36B55 /* ClothesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509FA3322A312E7A00E36B55 /* ClothesTableViewController.swift */; };
+		509FA3372A312F7000E36B55 /* Clothing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509FA3362A312F7000E36B55 /* Clothing.swift */; };
+		509FA33C2A3132CC00E36B55 /* ClothesTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509FA33B2A3132CC00E36B55 /* ClothesTableView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05C66BD02A30C94E009DCA0C /* TiendaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TiendaView.xib; sourceTree = "<group>"; };
-		05C66BD22A30CF70009DCA0C /* TiendaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiendaTableViewController.swift; sourceTree = "<group>"; };
 		05C80D902A24C36600FF28BA /* The-WKND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-WKND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C80D932A24C36600FF28BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05C80D952A24C36600FF28BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +89,9 @@
 		05C80DC62A24E15100FF28BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05C80DFF2A26024B00FF28BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		05C80E012A260C1600FF28BA /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		509FA3322A312E7A00E36B55 /* ClothesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesTableViewController.swift; sourceTree = "<group>"; };
+		509FA3362A312F7000E36B55 /* Clothing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clothing.swift; sourceTree = "<group>"; };
+		509FA33B2A3132CC00E36B55 /* ClothesTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClothesTableView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,8 +182,7 @@
 				05C80D9C2A24C36600FF28BA /* The_Wknd.xcdatamodeld */,
 				05C80DFF2A26024B00FF28BA /* HomeViewController.swift */,
 				05C80E012A260C1600FF28BA /* HomeViewController.xib */,
-				05C66BD22A30CF70009DCA0C /* TiendaTableViewController.swift */,
-				05C66BD02A30C94E009DCA0C /* TiendaView.xib */,
+				509FA3382A312F9C00E36B55 /* ClothesList */,
 			);
 			path = "The-Wknd";
 			sourceTree = "<group>";
@@ -201,6 +202,16 @@
 				05C80DB92A24C36C00FF28BA /* The_WkndUITestsLaunchTests.swift */,
 			);
 			path = "The-WkndUITests";
+			sourceTree = "<group>";
+		};
+		509FA3382A312F9C00E36B55 /* ClothesList */ = {
+			isa = PBXGroup;
+			children = (
+				509FA3362A312F7000E36B55 /* Clothing.swift */,
+				509FA3322A312E7A00E36B55 /* ClothesTableViewController.swift */,
+				509FA33B2A3132CC00E36B55 /* ClothesTableView.storyboard */,
+			);
+			path = ClothesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,11 +354,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				05C80DA32A24C36B00FF28BA /* LaunchScreen.storyboard in Resources */,
+				509FA33C2A3132CC00E36B55 /* ClothesTableView.storyboard in Resources */,
 				05C80DC72A24E15100FF28BA /* GoogleService-Info.plist in Resources */,
 				05C80E022A260C1600FF28BA /* HomeViewController.xib in Resources */,
 				05C80DA02A24C36B00FF28BA /* Assets.xcassets in Resources */,
 				05C80D9B2A24C36600FF28BA /* Main.storyboard in Resources */,
-				05C66BD12A30C94E009DCA0C /* TiendaView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +383,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05C66BD32A30CF70009DCA0C /* TiendaTableViewController.swift in Sources */,
+				509FA3342A312E7A00E36B55 /* ClothesTableViewController.swift in Sources */,
+				509FA3372A312F7000E36B55 /* Clothing.swift in Sources */,
 				05C80E002A26024B00FF28BA /* HomeViewController.swift in Sources */,
 				05C80D982A24C36600FF28BA /* AutenticacionViewController.swift in Sources */,
 				05C80D9E2A24C36600FF28BA /* The_Wknd.xcdatamodeld in Sources */,
@@ -554,7 +566,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RKSDQS5LFB;
+				DEVELOPMENT_TEAM = K3Y7FHG92P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "The-Wknd/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "The-WKND";
@@ -583,7 +595,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RKSDQS5LFB;
+				DEVELOPMENT_TEAM = K3Y7FHG92P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "The-Wknd/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "The-WKND";
