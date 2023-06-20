@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		055FAA582A38CB4E0010DF10 /* CeldaCarrito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FAA572A38CB4E0010DF10 /* CeldaCarrito.swift */; };
+		055FAA612A41D1350010DF10 /* CarroInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FAA602A41D1350010DF10 /* CarroInfoViewController.swift */; };
 		058BD7D62A32060000E0665F /* RopaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BD7D42A32060000E0665F /* RopaTableViewController.swift */; };
 		058BD7D92A3206E800E0665F /* RopaTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058BD7D82A3206E800E0665F /* RopaTableView.storyboard */; };
 		058BD7DC2A34CAB700E0665F /* CeldaRopaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BD7DA2A34CAB700E0665F /* CeldaRopaTableViewCell.swift */; };
@@ -15,7 +16,6 @@
 		058BD7DF2A372A6000E0665F /* CarritoCompra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BD7DE2A372A6000E0665F /* CarritoCompra.swift */; };
 		058BD7E22A372ABB00E0665F /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BD7E12A372ABB00E0665F /* Producto.swift */; };
 		058BD7E42A37395100E0665F /* ProductoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BD7E32A37395100E0665F /* ProductoInfoViewController.swift */; };
-		0593F3CB2A387BA400C20EE7 /* CarritoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0593F3CA2A387BA400C20EE7 /* CarritoInfoViewController.swift */; };
 		05C80D942A24C36600FF28BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C80D932A24C36600FF28BA /* AppDelegate.swift */; };
 		05C80D962A24C36600FF28BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C80D952A24C36600FF28BA /* SceneDelegate.swift */; };
 		05C80D982A24C36600FF28BA /* AutenticacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C80D972A24C36600FF28BA /* AutenticacionViewController.swift */; };
@@ -78,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		055FAA572A38CB4E0010DF10 /* CeldaCarrito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaCarrito.swift; sourceTree = "<group>"; };
+		055FAA602A41D1350010DF10 /* CarroInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarroInfoViewController.swift; sourceTree = "<group>"; };
 		058BD7D42A32060000E0665F /* RopaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopaTableViewController.swift; sourceTree = "<group>"; };
 		058BD7D82A3206E800E0665F /* RopaTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RopaTableView.storyboard; sourceTree = "<group>"; };
 		058BD7DA2A34CAB700E0665F /* CeldaRopaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaRopaTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		058BD7DE2A372A6000E0665F /* CarritoCompra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoCompra.swift; sourceTree = "<group>"; };
 		058BD7E12A372ABB00E0665F /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		058BD7E32A37395100E0665F /* ProductoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoInfoViewController.swift; sourceTree = "<group>"; };
-		0593F3CA2A387BA400C20EE7 /* CarritoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoInfoViewController.swift; sourceTree = "<group>"; };
 		05C80D902A24C36600FF28BA /* The-WKND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-WKND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C80D932A24C36600FF28BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05C80D952A24C36600FF28BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				055FAA572A38CB4E0010DF10 /* CeldaCarrito.swift */,
-				0593F3CA2A387BA400C20EE7 /* CarritoInfoViewController.swift */,
+				055FAA602A41D1350010DF10 /* CarroInfoViewController.swift */,
 			);
 			path = CarroInfo;
 			sourceTree = "<group>";
@@ -173,6 +173,14 @@
 				058BD7E32A37395100E0665F /* ProductoInfoViewController.swift */,
 			);
 			path = ProductoEnDetalleVC;
+			sourceTree = "<group>";
+		};
+		055FAA5B2A41B0930010DF10 /* Perfil */ = {
+			isa = PBXGroup;
+			children = (
+				05C80DFF2A26024B00FF28BA /* HomeViewController.swift */,
+			);
+			path = Perfil;
 			sourceTree = "<group>";
 		};
 		058BD7E02A372A6E00E0665F /* Clases */ = {
@@ -227,7 +235,7 @@
 				05C80DA42A24C36B00FF28BA /* Info.plist */,
 				05C80DC62A24E15100FF28BA /* GoogleService-Info.plist */,
 				05C80D9C2A24C36600FF28BA /* The_Wknd.xcdatamodeld */,
-				05C80DFF2A26024B00FF28BA /* HomeViewController.swift */,
+				055FAA5B2A41B0930010DF10 /* Perfil */,
 				055FAA592A38CF990010DF10 /* CarroInfo */,
 				055FAA5A2A38CFD50010DF10 /* ProductoEnDetalleVC */,
 				05C66BD42A31EC7B009DCA0C /* Ropa */,
@@ -427,8 +435,8 @@
 				05C80E002A26024B00FF28BA /* HomeViewController.swift in Sources */,
 				058BD7DF2A372A6000E0665F /* CarritoCompra.swift in Sources */,
 				058BD7E42A37395100E0665F /* ProductoInfoViewController.swift in Sources */,
-				0593F3CB2A387BA400C20EE7 /* CarritoInfoViewController.swift in Sources */,
 				05C80D982A24C36600FF28BA /* AutenticacionViewController.swift in Sources */,
+				055FAA612A41D1350010DF10 /* CarroInfoViewController.swift in Sources */,
 				05C80D9E2A24C36600FF28BA /* The_Wknd.xcdatamodeld in Sources */,
 				058BD7DC2A34CAB700E0665F /* CeldaRopaTableViewCell.swift in Sources */,
 				058BD7E22A372ABB00E0665F /* Producto.swift in Sources */,

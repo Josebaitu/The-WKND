@@ -96,7 +96,7 @@ class RopaTableViewController: UIViewController {
             productView?.producto = products[indexPath!.row]
             productView?.controlProductosCarrito = self
         case "segueCarritoInfo":
-            let vistaCarrito = segue.destination as? CarritoInfoViewController
+            let vistaCarrito = segue.destination as? CarroInfoViewController
             vistaCarrito?.controlProductosCarrito = self
         case "perfilInfo":
             _ = segue.destination as? HomeViewController

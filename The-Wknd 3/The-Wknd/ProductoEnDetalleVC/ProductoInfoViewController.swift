@@ -28,7 +28,7 @@ class ProductoInfoViewController: UIViewController {
         
         navigationController?.isNavigationBarHidden = true
         
-        botonVolver.setTitle("x", for: .normal)
+        botonVolver.setTitle("Volver", for: .normal)
         botonVolver.tintColor = .gray
         
         cantidadTextField.text = String(cantidad)
