@@ -18,6 +18,21 @@ class RopaTableViewController: UIViewController {
     @IBOutlet weak var itemsEnCarrito: UILabel!
     @IBOutlet weak var comprarTotal: UILabel!
     
+    //Cogemos los datos del usuario
+    
+    private let email: String
+    private let provider: ProviderType
+    
+    init(email: String, provider: ProviderType){
+        self.email = email
+        self.provider = provider
+        super.init(nibName: "PerfilViewController", bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+   
     var products: [Product] = []
     var carrito = CarritoCompra()
     
@@ -96,16 +111,15 @@ class RopaTableViewController: UIViewController {
             productView?.producto = products[indexPath!.row]
             productView?.controlProductosCarrito = self
         case "segueCarritoInfo":
-            let vistaCarrito = segue.destination as? CarritoInfoViewController
+            let vistaCarrito = segue.destination as? CarroInfoViewController
             vistaCarrito?.controlProductosCarrito = self
-        case "perfilInfo":
-            _ = segue.destination as? HomeViewController
         default:
             print("Vaya.")
         }
     }
 
     @IBAction func botonEnseñarPerfil(_ sender: UIButton) {
+        self.navigationController?.pushViewController(PerfilViewController(email: email, provider: .basic), animated: true)
     }
     
     
@@ -113,7 +127,7 @@ class RopaTableViewController: UIViewController {
         
         if let result = result, error == nil {
             
-            self.navigationController?.pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
+            self.navigationController?.pushViewController(PerfilViewController(email: result.user.email!, provider: .basic), animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Error", message: "Se ha producido un error de autenticación mediante \(provider.hashValue)", preferredStyle: .alert)

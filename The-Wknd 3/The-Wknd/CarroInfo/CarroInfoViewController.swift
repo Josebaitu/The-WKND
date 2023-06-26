@@ -1,5 +1,5 @@
 //
-//  CarritoInfoViewController.swift
+//  CarroInfoViewController.swift
 //  The-WKND
 //
 //  Created by Joseba Iturrioz Aguirre on 20/6/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CarritoInfoViewController: UIViewController {
+class CarroInfoViewController: UIViewController {
 
     @IBOutlet weak var carritoInfoTableView: UITableView!
     @IBOutlet weak var vistaAbajo: UIView!
@@ -28,7 +28,7 @@ class CarritoInfoViewController: UIViewController {
         carritoInfoTableView.delegate = self
         carritoInfoTableView.dataSource = self
         
-        itemsCarritoLabel.text = "Items: \(controlProductosCarrito.carrito.contarCarritoCompra(carrito: controlProductosCarrito.carrito)) €"
+        itemsCarritoLabel.text = "Items: \(controlProductosCarrito.carrito.contarCarritoCompra(carrito: controlProductosCarrito.carrito))"
         carritoTotalLabel.text = "Total: \(controlProductosCarrito.carrito.calcularTotal(carrito: controlProductosCarrito.carrito)) €"
         carritoInfoTableView.separatorColor = .clear
     }
@@ -52,7 +52,7 @@ class CarritoInfoViewController: UIViewController {
     }
 }
 
-extension CarritoInfoViewController: UITableViewDelegate, UITableViewDataSource {
+extension CarroInfoViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return controlProductosCarrito.carrito.listaProductos.count
     }
