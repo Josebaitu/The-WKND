@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  PerfilViewController.swift
 //  The-WKND
 //
 //  Created by Joseba Iturrioz Aguirre on 22/6/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class PerfilViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
