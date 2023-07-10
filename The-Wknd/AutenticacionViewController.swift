@@ -52,7 +52,7 @@ class AutenticacionViewController: UIViewController {
         if let email = emailTextField.text, let contraseña = contraseñaTextField.text {
             Auth.auth().createUser(withEmail: email, password: contraseña) { (result, error) in
                 
-                self.enseñarVistaHome(result: result, error: error, provider: .basic)
+                self.enseñarVistaHome(result: result, error: error)
             }
         }
         
@@ -63,19 +63,22 @@ class AutenticacionViewController: UIViewController {
         if let email = emailTextField.text, let contraseña = contraseñaTextField.text {
             Auth.auth().signIn(withEmail: email, password: contraseña) { (result, error) in
                 
-                self.enseñarVistaHome(result: result, error: error, provider: .basic)
+                self.enseñarVistaHome(result: result, error: error)
             }
         }
     }
     
-    private func enseñarVistaHome(result: AuthDataResult?, error: Error?, provider: ProviderType) {
+    private func enseñarVistaHome(result: AuthDataResult?, error: Error?) {
         
         if let result = result, error == nil {
-            
-            self.navigationController?.pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
+            let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
+            let viewController = storyboard.instantiateInitialViewController() as! HomeViewController
+            viewController.email = result.user.email
+            self.navigationController?.pushViewController(viewController, animated: true)
             
         } else {
-            let alertController = UIAlertController(title: "Error", message: "Se ha producido un error de autenticación mediante \(provider.hashValue)", preferredStyle: .alert)
+            let errorMessage = "Se ha producido un error de autenticación"
+            let alertController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }
