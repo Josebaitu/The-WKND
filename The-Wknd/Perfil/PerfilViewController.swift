@@ -6,24 +6,60 @@
 //
 
 import UIKit
+import FirebaseAuth
+
+enum ProviderType: String{
+    case basic
+}
 
 class PerfilViewController: UIViewController {
 
+    @IBOutlet weak var imagenPerfil: UIImageView!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var proveedorLabel: UILabel!
+    
+    var email: String = ""
+    let provider: ProviderType = .basic
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "Perfil"
+        
+        navigationItem.setHidesBackButton(true, animated: false)
+        
+        //Guardar datos de usuario
+        
+        let defaults = UserDefaults.standard
+        defaults.set(email, forKey: "email")
+        defaults.set(provider.rawValue, forKey: "provider")
+        defaults.synchronize()
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func cerrarSesionAccionBoton(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "email")
+        defaults.removeObject(forKey: "provider")
+        defaults.synchronize()
+        
+        switch provider {
+        case .basic:
+            firebaseLogOut()
+        }
+        navigationController?.pushViewController(AutenticacionViewController(), animated: true)
+        
+        }
+    
+    private func firebaseLogOut() {
+        
+        do {
+            try Auth.auth().signOut()
+            
+        } catch {
+            //Error
+        }
     }
-    */
-
 }

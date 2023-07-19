@@ -18,6 +18,10 @@ class RopaTableViewController: UIViewController {
     @IBOutlet weak var itemsEnCarrito: UILabel!
     @IBOutlet weak var comprarTotal: UILabel!
     
+    //Cogemos los datos del usuario
+    
+    var email: String = ""
+   
     var products: [Product] = []
     var carrito = CarritoCompra()
     
@@ -98,24 +102,35 @@ class RopaTableViewController: UIViewController {
         case "segueCarritoInfo":
             let vistaCarrito = segue.destination as? CarroInfoViewController
             vistaCarrito?.controlProductosCarrito = self
-        case "perfilInfo":
-            _ = segue.destination as? HomeViewController
+        case "segueVistaPerfil":
+            let vistaPerfil = segue.destination as? VistaPerfilViewController
+            //vistaPerfil!.emailLabel.text = email
+            //vistaPerfil?.proveedorLabel.text = "basic"
         default:
             print("Vaya.")
         }
     }
 
-    @IBAction func botonEnseñarPerfil(_ sender: UIButton) {
-    }
+    /*@IBAction func botonEnseñarPerfil(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "VistaPerfilViewController", bundle: nil)
+        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "VistaPerfilViewController") as! VistaPerfilViewController
+        viewController.emailLabel.text = email
+        viewController.proveedorLabel.text = "basic"
+        navigationController?.pushViewController(viewController, animated: true)
+    }*/
     
     
-    func enseñarVistaHome(result: AuthDataResult?, error: Error?) {
+    func enseñarVistaPerfil(result: AuthDataResult?, error: Error?) {
         
         if let result = result, error == nil {
             let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
-            let viewController = storyboard.instantiateInitialViewController() as! HomeViewController
-            viewController.email = result.user.email
+            let viewController = storyboard.instantiateInitialViewController() as! VistaPerfilViewController
+            viewController.email = result.user.email!
             self.navigationController?.pushViewController(viewController, animated: true)
+
+            
+            self.navigationController?.pushViewController(VistaPerfilViewController(), animated: true)
+
             
         } else {
             let errorMessage = "Se ha producido un error de autenticación"

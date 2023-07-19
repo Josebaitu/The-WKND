@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05119BED2A5D4AED00DE403C /* VistaPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05119BEC2A5D4AED00DE403C /* VistaPerfilViewController.swift */; };
 		055FAA582A38CB4E0010DF10 /* CeldaCarrito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FAA572A38CB4E0010DF10 /* CeldaCarrito.swift */; };
 		055FAA612A41D1350010DF10 /* CarroInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055FAA602A41D1350010DF10 /* CarroInfoViewController.swift */; };
 		058BD7D62A32060000E0665F /* RopaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058BD7D42A32060000E0665F /* RopaTableViewController.swift */; };
@@ -54,7 +55,6 @@
 		05C80DFA2A24E4C200FF28BA /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05C80DF92A24E4C200FF28BA /* FirebaseRemoteConfigSwift */; };
 		05C80DFC2A24E4C200FF28BA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 05C80DFB2A24E4C200FF28BA /* FirebaseStorage */; };
 		05C80DFE2A24E4C200FF28BA /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 05C80DFD2A24E4C200FF28BA /* FirebaseStorageCombine-Community */; };
-		05C80E002A26024B00FF28BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C80DFF2A26024B00FF28BA /* HomeViewController.swift */; };
 		05C80E052A26586C00FF28BA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 05C80E042A26586C00FF28BA /* GoogleSignIn */; };
 		05C80E072A26586C00FF28BA /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 05C80E062A26586C00FF28BA /* GoogleSignInSwift */; };
 /* End PBXBuildFile section */
@@ -77,10 +77,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05119BEC2A5D4AED00DE403C /* VistaPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VistaPerfilViewController.swift; path = "The-Wknd/Perfil/VistaPerfilViewController.swift"; sourceTree = SOURCE_ROOT; };
 		055FAA572A38CB4E0010DF10 /* CeldaCarrito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaCarrito.swift; sourceTree = "<group>"; };
 		055FAA602A41D1350010DF10 /* CarroInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarroInfoViewController.swift; sourceTree = "<group>"; };
 		058BD7D42A32060000E0665F /* RopaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopaTableViewController.swift; sourceTree = "<group>"; };
-		058BD7D82A3206E800E0665F /* RopaTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RopaTableView.storyboard; sourceTree = "<group>"; };
+		058BD7D82A3206E800E0665F /* RopaTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = RopaTableView.storyboard; path = "The-Wknd/Ropa/RopaTableView.storyboard"; sourceTree = SOURCE_ROOT; };
 		058BD7DA2A34CAB700E0665F /* CeldaRopaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaRopaTableViewCell.swift; sourceTree = "<group>"; };
 		058BD7DB2A34CAB700E0665F /* CeldaRopaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CeldaRopaTableViewCell.xib; sourceTree = "<group>"; };
 		058BD7DE2A372A6000E0665F /* CarritoCompra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarritoCompra.swift; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		05C80DB72A24C36C00FF28BA /* The_WkndUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_WkndUITests.swift; sourceTree = "<group>"; };
 		05C80DB92A24C36C00FF28BA /* The_WkndUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_WkndUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		05C80DC62A24E15100FF28BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		05C80DFF2A26024B00FF28BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +178,7 @@
 		055FAA5B2A41B0930010DF10 /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
-				05C80DFF2A26024B00FF28BA /* HomeViewController.swift */,
+				05119BEC2A5D4AED00DE403C /* VistaPerfilViewController.swift */,
 			);
 			path = Perfil;
 			sourceTree = "<group>";
@@ -432,11 +432,11 @@
 			files = (
 				058BD7D62A32060000E0665F /* RopaTableViewController.swift in Sources */,
 				055FAA582A38CB4E0010DF10 /* CeldaCarrito.swift in Sources */,
-				05C80E002A26024B00FF28BA /* HomeViewController.swift in Sources */,
 				058BD7DF2A372A6000E0665F /* CarritoCompra.swift in Sources */,
 				058BD7E42A37395100E0665F /* ProductoInfoViewController.swift in Sources */,
 				05C80D982A24C36600FF28BA /* AutenticacionViewController.swift in Sources */,
 				055FAA612A41D1350010DF10 /* CarroInfoViewController.swift in Sources */,
+				05119BED2A5D4AED00DE403C /* VistaPerfilViewController.swift in Sources */,
 				05C80D9E2A24C36600FF28BA /* The_Wknd.xcdatamodeld in Sources */,
 				058BD7DC2A34CAB700E0665F /* CeldaRopaTableViewCell.swift in Sources */,
 				058BD7E22A372ABB00E0665F /* Producto.swift in Sources */,
